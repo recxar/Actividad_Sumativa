@@ -23,7 +23,68 @@
         
             
           </ul>
-    
+          <h2 id="pp">Autos en reparación</h2>
+                  
+        
+  
+  <input class="form-control" id="myInput" type="text" placeholder="Buscar..">
+  <br>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Mecanico</th>
+        <th>Diagnostico</th>
+        <th>Fecha</th>
+        <th>Listado de materiales utilizados</th>
+        <th>Modelo Vehiculo</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Emily</td>
+        <td>Cables cortados</td>
+        <td>22/08/2019</td>
+        <td>Cables</td>
+        <td>Ferrari 458 Italia</td>
+      </tr>
+      <tr>
+        <td>Manuel</td>
+        <td>Reparar puerta piloto</td>
+        <td>05/09/2020</td>
+        <td>martillo,pintura</td>
+        <td>Ford F-150 2020</td>
+      </tr>
+      <tr>
+        <td>Emily</td>
+        <td>Mal funcionamiento de focos delanteros</td>
+        <td>04/09/2020</td>
+        <td>destornillador,nuevo foco</td>
+        <td>Chevrolet Camaro 2022</td>
+      </tr>
+      <tr>
+        <td>Manuel</td>
+        <td>Rueda pinchada</td>
+        <td>10/10/2020</td>
+        <td>Rueda de repuesto</td>
+        <td>Nissan  Versa 2019</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+        
 
      
     </div>

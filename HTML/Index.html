@@ -19,6 +19,12 @@
     <img id="logo" src="../Imagenes/Rayo.png" alt="Logo" width="200" height="185" align-left><div class="text-center py-5 text-white " >
         <ul id="links" class="nav justify-content-center " >
             <li class="nav-item">
+                <nav id="navegador" class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <form class="form-inline" action="">
+                      <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                      <button class="btn btn-success" type="submit">Buscar</button>
+              </li>
+            <li class="nav-item">
               <a id="color" class="nav-link" href="../HTML/Galeria.html">Galeria</a>
             </li>
             <li class="nav-item">
@@ -28,10 +34,10 @@
               <a id="color" class="nav-link" href="../HTML/Reparacion.html">Reparación</a>
             </li>
             <li class="nav-item">
-              <a id="color" class="nav-link " href="#">Contactanos</a>
+              <a id="color" class="nav-link " href="../HTML/Contactanos.html">Contactanos</a>
             </li>
             <li class="nav-item">
-                <img id="logoin" src="../Imagenes/24831-6-member-login-button-clipart.png" alt="Test" width="180" height="70" >
+               <a href="../HTML/Login.html"><img id="logoin" src="../Imagenes/24831-6-member-login-button-clipart.png" alt="Test" width="180" height="70" ></a>
                 
               </li>
           </ul>
@@ -49,21 +55,21 @@
         </ul>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../Imagenes/reprogramacion-950x550.jpg" alt="Test" width="650" height="650">
+            <a href="../HTML/Reparacion.html"><img src="../Imagenes/reprogramacion-950x550.jpg" alt="Test" width="650" height="650"></a>
             <div class="carousel-caption">
               <h3>Diagnostico de computadora del automovil</h3>
               <p>Ultimo en Tecnologia</p>
             </div>   
           </div>
           <div class="carousel-item">
-            <img src="../Imagenes/cambio-aceite.jpg" alt="Aceite" width="650" height="650">
+            <a href="../HTML/Reparacion.html"><img src="../Imagenes/cambio-aceite.jpg" alt="Aceite" width="650" height="650"></a>
             <div class="carousel-caption">
               <h3>Cambio de aceite</h3>
               <p>¡Aceite de la mejor calidad¡</p>
             </div>   
           </div>
           <div class="carousel-item">
-            <img src="../Imagenes/cables00.png" alt="Cables" width="650" height="650">
+            <a href="../HTML/Reparacion.html"><img src="../Imagenes/cables00.png" alt="Cables" width="650" height="650"></a>
             <div class="carousel-caption">
               <h3>Reparacion sistema electrico automotriz</h3>
               <p>+ Test Gratis</p>
@@ -82,7 +88,16 @@
 
 
 
-
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
 
 
 </body>
