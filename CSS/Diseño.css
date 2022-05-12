@@ -1,0 +1,57 @@
+.fondo{
+  background-image: url('../Imagenes/f1280x720-34374_166049_5050.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.container{
+    height: 89px;
+}
+
+#logo{
+
+    margin-top: -10px;
+    margin-left: -380px;
+}
+#demo{
+    margin-left: 260px;
+    margin-top: -90px;
+}
+
+#links{
+    margin-top: -200px;
+}
+
+#logoin{
+    
+    margin-left: 910px;
+    margin-top: -80px;
+}
+
+#color{
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+#color:hover{
+    color: grey;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+#cardone{
+    margin-top: 130px;
+}
+
+#letra{
+    color: black;
+    font-family: sans-serif;
+}
+
+#cardtwo{
+    margin-left: 800px;
+    margin-top: -390px;
+}
+#bajo{
+    margin-top: 200px;
+}
